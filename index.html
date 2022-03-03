@@ -59,7 +59,7 @@ function draw_n() {					// javascript name function
 function draw_image() {					// javascript image function 
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
-  var img = document.getElementById("scream");
+  var img = document.getElementById("thumbs up");
   ctx.drawImage(img,10,10);
 }
  
@@ -102,6 +102,13 @@ function draw_image() {					// javascript image function
 	
 	<a onclick="draw_image();" class="w3-btn w3-black">Image</a>	<!-- javascript image button -->
 	
+	<p>Image to use:</p>						<!-- image to use -->
+<img id="thumbs up" src="https://i5.walmartimages.com/asr/d68402e3-ec4b-4253-97aa-612d11944403_1.70dc3da2d4ec61ad0aa879e9752c2e37.jpeg?odnHeight=612&amp;odnWidth=612&amp;odnBg=FFFFFF" 
+	alt="Smiley thumbs up" width="199" height="99">
+	
+	<p>Canvas to fill:</p>						<!-- canvas to fill -->
+<canvas id="myCanvas" width="200" height="100"
+	style="border:1px solid #d3d3d3;">
 	
 
 
