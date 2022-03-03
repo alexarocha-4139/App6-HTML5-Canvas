@@ -56,12 +56,14 @@ function draw_n() {					// javascript name function
 	ctx.fillText("Alexa", 10, 50);
 	}
 	
-function draw_image() {					// javascript image function 
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  var img = document.getElementById("thumbs up");
-  ctx.drawImage(img,10,10);
-}
+function draw_image()						// edited java image
+	var canvas = document.getElementById("e");
+	var ctx = canvas.getContext("2d");
+	var cat = draw_image();
+	cat.src = "images/cat.png";
+	cat.onLoad = function draw_image() {
+		context.drawImage(cat, 0, 0);
+	}
  
 </script>
 
@@ -102,7 +104,8 @@ function draw_image() {					// javascript image function
 	
 	<a onclick="draw_image();" class="w3-btn w3-black">Image</a>	<!-- javascript image button -->
 	
-	
+	<canvas id="myCanvas" width="177" height="113" style= "border:1px solid #000000;">		<!-- canvas mark up -->
+	</canvas>
 
 
 		
