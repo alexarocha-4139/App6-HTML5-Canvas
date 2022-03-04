@@ -62,7 +62,9 @@ function draw_image() {					//hopefully fixed image function
 	var img = document.getElementById("scream");
 	ctx.drawImage( img, 10, 10);
 	}
- 
+ const context = myCanvas.getContext('2d');			//cleared canvas?
+	context.clearRect(0, 0, myCanvas.width, myCanvas.height);
+	
 </script>
 
 
