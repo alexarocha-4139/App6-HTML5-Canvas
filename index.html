@@ -55,6 +55,13 @@ function draw_n() {					// javascript name function
 	ctx.font = "30px Arial";
 	ctx.fillText("Alexa", 10, 50);
 	}
+
+window.onload = draw_b() {				//image function 
+ 	var c = document.getElementById("myCanvas");
+ 	var ctx = c.getContext("2d");
+ 	var img = document.getElementById("scream");
+  	ctx.drawImage(img, 10, 10);
+	}
  
 </script>
 
@@ -95,6 +102,7 @@ function draw_n() {					// javascript name function
 	
 	<a onclick="draw_image();" class="w3-btn w3-black">Image</a>	<!-- javascript image button -->
 	
+	<img id="scream" width="220" height="277" src="img_the_scream.jpg" alt="The Scream">		<!-- added image --> 
 
 					   
 		
