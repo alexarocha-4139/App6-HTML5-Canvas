@@ -76,7 +76,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 function draw_R() {							//rectangle function name
 	var canvas = document.getElementById("myCanvas");		//canvas element
-	var ctx = c.getContext("2d");					//ctx draws rectangle if called
+	var ctx = canvas.getContext("2d");					//ctx draws rectangle if called
 	ctx.beginPath();
 	ctx.lineWidth = "10";						//line width
 	ctx.strokeStyle = "blue";					//line color
@@ -90,7 +90,7 @@ function draw_R() {							//rectangle function name
 <script>								//start of script
 function draw_N() {							//name function 
 	var canvas = document.getElementById("myCanvas");		//canvas element
-	var ctx = c.getContext("2d");					//ctx draws name if called
+	var ctx = canvas.getContext("2d");					//ctx draws name if called
 	ctx.font = "30px Arial";					//name font and size
 	ctx.fillText("Alexa", 30, 30);					//name dimensions
 };
@@ -98,16 +98,29 @@ function draw_N() {							//name function
 	
 	<a onclick="draw_N();" class="w3-btn w3-black">Name</a>		<!--name button-->
 	
-
+<script>								<!--start of script-->
+function drawImage() {							<!--image function-->
+	var canvas = document.getElementById("myCanvas");		<!--image element-->
+	var ctx = canvas.getContext("2d");
+	var smiley = new Image (); 					
+	smiley.src = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…iAIiIAiIgC8REB6iIgCIiAIiIDxeoiAIiIAiIgCIiAIiID//Z";	<!--image itself-->
+	smiley.onload = function() {
+		ctx.drawImage(smiley, 2, 2, 100, 100);			<!--image dimensions-->
+	}
+};
+</script>
+	
+	<a onclick="drawImage();" class="w3-btn w3-black">Image</a>		<!--image button-->
+	
 <script>								//start of script
-function clearRect() {
+function clearCanvas() {
 	var canvas = document.getElementById("myCanvas");		//canvas element 
 	var ctx = canvas.getContext ("2d"); 				//clears canvas if called
 	ctx.clearRect(0, 0, canvas.width, canvas.height);		//clear canvas code
 };
 </script>							<!--end of script--> 
 	
-	<a onclick="clearRect();" class="w3-btn w3-black">Clear</a>	<!--clear button-->
+	<a onclick="clearCanvas();" class="w3-btn w3-black">Clear</a>	<!--clear button-->
 	
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
