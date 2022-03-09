@@ -55,15 +55,6 @@ function draw_n() {					// javascript name function
 	ctx.font = "30px Arial";			// canvas font and size
 	ctx.fillText("Alexa", canvas.width/2, canvas.height/2); // draws name onto canvas 
 	}
-
-function draw_image() {					// function name
-	var c = document.getElementById("myCanvas");	// will draw image if c.getContext is called
-	var ctx = c.getContext("2d");
-	var smile = new Image (); 			// image variable
-	smile.src = "smile emoji.jpeg"; 		// image
-	smile.onload = function() { 
-		ctx.draw_image(smile, 2, 2, 100, 100);	// image dimensions
-	}
 </script>
 
 
