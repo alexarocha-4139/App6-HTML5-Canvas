@@ -39,28 +39,30 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-function draw_b() {						
+function draw_r() {						// function name
 	var c = document.getElementById("myCanvas");		// java square button function. 
-	var ctx = c.getContext("2d");
+	var ctx = c.getContext("2d");				// will draw rectangle if c.getContext is called
 	ctx.beginPath();
-	ctx.lineWidth = "4";
-	ctx.strokeStyle = "green";
-	ctx.rect(30, 30, 50, 50);
+	ctx.lineWidth = "10";
+	ctx.strokeStyle = "blue";
+	ctx.rect(50, 50, 150, 80);
 	ctx.stroke();
 	}
 
 function draw_n() {					// javascript name function 
 	var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-	ctx.font = "30px Arial";
-	ctx.fillText("Alexa", 10, 50);
+	var ctx = c.getContext("2d");			// will draw name if c.getContext is called
+	ctx.font = "30px Arial";			// canvas font and size
+	ctx.fillText("Alexa", canvas.width/2, canvas.height/2); // draws name onto canvas 
 	}
 
-function draw_image() {					//hopefully fixed image function 
-	var c = document.getElementById("myCanvas");
+function draw_image() {					// function name
+	var c = document.getElementById("myCanvas");	// will draw image if c.getContext is called
 	var ctx = c.getContext("2d");
-	var img = document.getElementById("scream");
-	ctx.drawImage( img, 10, 10);
+	var smile = new Image (); 			// image variable
+	smile.src = "smile emoji.jpeg"; 		// image
+	smile.onload = function() { 
+		ctx.draw_image(smile, 2, 2, 100, 100);	// image dimensions
 	}
 </script>
 
@@ -96,7 +98,7 @@ function draw_image() {					//hopefully fixed image function
 	</canvas> 			<!-- added a_canvas variable--> 
 	</div>
 
-	<a onclick="draw_b();" class="w3-btn w3-black">Square</a>	 <!-- added button w/java function -->
+	<a onclick="draw_r();" class="w3-btn w3-black">Square</a>	 <!-- added button w/java function -->
 	
 	<a onclick="draw_n();" class="w3-btn w3-black">Name</a>		<!-- javascript name button --> 
 	
