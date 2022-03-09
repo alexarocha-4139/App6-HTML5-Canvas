@@ -40,7 +40,7 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
 function draw_r() {						// function name
-	var c = document.getElementById("myCanvas");		// java square button function. 
+	var canvas = document.getElementById("myCanvas");		// java square button function. 
 	var ctx = c.getContext("2d");				// will draw rectangle if c.getContext is called
 	ctx.beginPath();
 	ctx.lineWidth = "10";
@@ -50,11 +50,21 @@ function draw_r() {						// function name
 	}
 
 function draw_n() {					// javascript name function 
-	var c = document.getElementById("myCanvas");
+	var canvas = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");			// will draw name if c.getContext is called
 	ctx.font = "30px Arial";			// canvas font and size
-	ctx.fillText("Alexa", 50, 50); // draws name onto canvas 
+	ctx.fillText("Alexa", 30, 30); // draws name onto canvas 
 	}
+
+function draw_image(); {
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContex("2d");
+	var smileyFace = newImage();
+	smileyFace.src = "https://us.123rf.com/450wm/yuliaglam/yuliaglam1706…00007/80110490-smiley-vector-happy-face.jpg?ver=6";
+	smileyFace.onload = function() {
+		ctx.draw_image(smileyFace, 2, 2, 100, 100);
+	}
+};
 </script>
 
 
