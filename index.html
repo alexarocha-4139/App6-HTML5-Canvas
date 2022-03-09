@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Alexa Rocha
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 Create a canvas with buttons that are able to draw a square, my name, an image, and clear the entire canvas.
  
 Known Issues:
-blah, blah, blah, blah
+Had a hard time troubleshooting the image function.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -102,7 +102,7 @@ function draw_N() {							//name function
 function drawImage() {							//image function
 	var canvas = document.getElementById("myCanvas");		//image element
 	var ctx = canvas.getContext("2d");
-	var smiley = new Image (); 					
+	var smiley = drawImage(); 					
 	smiley.src = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…iAIiIAiIgC8REB6iIgCIiAIiIDxeoiAIiIAiIgCIiAIiID//Z";	//image itself
 	smiley.onload = function() {
 		ctx.drawImage("smiley",200, 100);			//image dimensions
