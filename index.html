@@ -98,13 +98,12 @@ function draw_N() {							//name function
 	
 	<a onclick="draw_N();" class="w3-btn w3-black">Name</a>		<!--name button-->
 	
-	<img src ="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…iAIiIAiIgC8REB6iIgCIiAIiIDxeoiAIiIAiIgCIiAIiID//Z" alt="smiley face" width="200" height="100">	<!--inserted image-->
 <script>								//start of script
 function drawImage() {							//image function
 	var canvas = document.getElementById("myCanvas");		//image element
 	var ctx = canvas.getContext("2d");
 	var smiley = drawImage(); 					
-	smiley.src = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…iAIiIAiIgC8REB6iIgCIiAIiIDxeoiAIiIAiIgCIiAIiID//Z";	//image itself
+	img src ="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…iAIiIAiIgC8REB6iIgCIiAIiIDxeoiAIiIAiIgCIiAIiID//Z"; //image itself	
 	smiley.onload = function() {
 		ctx.drawImage(img,10,10);			//image dimensions
 	}
